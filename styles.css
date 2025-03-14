@@ -1,0 +1,293 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9 url('images/Gweru-Boggie-Clock.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: #003087;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Page Hero with Background Image */
+.page-hero {
+    background-image: url('gweru-building.jpeg'); /* Replace with your image file path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.page-hero h2, .page-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+}
+
+/* Quick Links Section */
+.quick-links {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.quick-links h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.link-card {
+    background-color: #003087;
+    color: white;
+    padding: 1.5rem;
+    width: 200px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-card:hover {
+    background-color: #0056d2;
+}
+
+/* News Section */
+.news-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.news-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.news-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #003087;
+}
+
+.news-card p {
+    margin-bottom: 1rem;
+}
+
+/* General Content Styles */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #003087;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Services Content */
+.services-content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #003087;
+    color: white;
+    padding: 2rem;
+    width: 200px;
+    border-radius: 5px;
+}
+
+/* Work, Explore, Councillors, Queues, Bylaws Content */
+.work-content, .explore-content, .councillors-content, .queues-content, .bylaws-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Report Content */
+.report-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#fault-form input, #fault-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#fault-form textarea {
+    height: 100px;
+}
+
+/* Councillors Search */
+#ward-input {
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #003087;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056d2;
+}
+
+/* Pay Bills Section */
+.pay-bills {
+    padding: 40px 0;
+  }
+  
+  .pay-bills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background: #0056b3;
+  }
+  
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

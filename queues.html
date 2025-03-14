@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avoid Queues | City of Gweru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>City of Gweru</h1></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="councillors.html">Councillors</a></li>
+                <li><a href="report.html">Report a Fault</a></li>
+                <li><a href="#queues" class="active">Avoid Queues</a></li>
+                <li><a href="bylaws.html">By-laws</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="queues">
+            <div class="page-hero">
+                <h2>Avoid Queues</h2>
+                <p>Pay bills and access services online to save time.</p>
+            </div>
+            <div class="queues-content">
+                <h3>Online Payments</h3>
+                <p>Pay water bills and rates through our secure portal.</p>
+                <button onclick="showAlert('Payment portal under development.')">Pay Now
+
+                  <!-- Payment Form -->
+      <form id="payment-form" action="/process-payment" method="POST">
+        <div class="form-group">
+          <label for="account-number">Account Number:</label>
+          <input type="text" id="account-number" name="account-number" required aria-label="Enter your account number">
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount to Pay ($):</label>
+          <input type="number" id="amount" name="amount" min="1" step="0.01" required aria-label="Enter the amount to pay">
+        </div>
+
+        <div class="form-group">
+          <label for="payment-method">Payment Method:</label>
+          <select id="payment-method" name="payment-method" required aria-label="Select your payment method">
+            <option value="">-- Select --</option>
+            <option value="Ecocash">Ecocash</option>
+            <option value="Onemoney">One Money</option>
+            <option value="debit-card">Debit Card</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" aria-label="Enter your card number">
+        </div>
+
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date:</label>
+          <input type="month" id="expiry-date" name="expiry-date" required aria-label="Enter your card's expiry date">
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="password" id="cvv" name="cvv" maxlength="3" required aria-label="Enter your card's CVV">
+        </div>
+
+        <button type="submit" class="submit-button">Pay Now</button>
+      </form>
+    </div>   
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 City of Gweru. All rights reserved.</p>
+        <p>Contact us: info@gweru.org.zw | +263 54 222 011</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
