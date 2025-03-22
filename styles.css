@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #f9f9f9 url('images/Gweru-Boggie-Clock.jpg') no-repeat center center fixed;
+    background: #f9f9f9 url('city-center.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -54,7 +54,7 @@ nav ul li a.active {
 
 /* Page Hero with Background Image */
 .page-hero {
-    background-image: url('gweru-building.jpeg'); /* Replace with your image file path */
+    background-image: url(''); 
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
@@ -121,6 +121,48 @@ nav ul li a.active {
     background-color: #0056d2;
 }
 
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #0056b3;
+}
 /* News Section */
 .news-section {
     padding: 2rem;
@@ -279,6 +321,42 @@ button:hover {
   .submit-button:hover {
     background: #0056b3;
   }
+  /*social media*/
+  footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    vertical-align: middle;
+    transition: opacity 0.3s; /* Optional hover effect */
+}
+
+.social-icon:hover img {
+    opacity: 0.8; /* Slight fade on hover */
+}
   
 
 /* Footer */
