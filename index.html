@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City of Gweru | Official Website</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <h1>City of Gweru</h1>
+            <a href="index.html"><img src="images/gweru-logo.png" alt="City of Gweru Logo" class="logo-img"></a>
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="work.html">Work</a></li>
@@ -25,6 +27,10 @@
                 <li><a href="bylaws.html">By-laws</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-input" aria-label="Search the site">
+            <button onclick="searchSite()" aria-label="Search">Search</button>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -33,10 +39,11 @@
             <div class="page-hero">
                 <h2>Welcome to Gweru</h2>
                 <p>The heart of the Midlands Province in Zimbabwe.</p>
+               <!-- <a href="explore.html" class="cta-button">Discover Gweru</a> -->
             </div>
         </section>
 
-        <section class="quick-links">
+       <!-- <section class="quick-links">
             <h2>Explore Gweru</h2>
             <div class="links-container">
                 <a href="about.html" class="link-card">About the City</a>
@@ -44,7 +51,7 @@
                 <a href="explore.html" class="link-card">Explore Gweru</a>
                 <a href="report.html" class="link-card">Report a Fault</a>
             </div>
-        </section>
+        </section>---->
 
         <section class="news-section">
             <h2>Latest News & Events</h2>
@@ -52,7 +59,7 @@
                 <div class="news-card">
                     <h3>Gweru Agricultural Show</h3>
                     <p>Join us for the annual event on April 15-18, 2025, celebrating local culture and agriculture at the Gweru Showgrounds.</p>
-                    <a href="agricultural-show.html" class="button">Learn More</a>
+                    <a href="agric.html" class="button">Learn More</a>
                 </div>
                 <div class="news-card">
                     <h3>Water Conservation Initiative</h3>
@@ -68,6 +75,13 @@
         <div class="footer-content">
             <p>© 2025 City of Gweru. All rights reserved.</p>
             <p>Contact us: <a href="mailto:info@gweru.org.zw">info@gweru.org.zw</a> | +263 54 222 011</p>
+            <div class="newsletter-signup">
+                <h3>Stay Updated</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
             <div class="social-links">
                 <a href="https://twitter.com/CityOfGweru" target="_blank" class="social-icon">
                     <img src="images/x-image.png" alt="Twitter">
