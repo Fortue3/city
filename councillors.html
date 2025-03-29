@@ -3,59 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Your Councillors | City of Gweru</title>
+    <meta name="description" content="Meet the City of Gweru councillors, dedicated to serving the community.">
+    <meta name="keywords" content="Gweru councillors, City of Gweru, Zimbabwe">
+    <title>Councillors | City of Gweru</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo"><h1>City of Gweru</h1></div>
-        <nav>
+        <div class="logo">
+            <a href="index.html"><img src="images/gweru-logo.png" alt="City of Gweru Logo" class="logo-img"></a>
+        </div>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="work.html">Work</a></li>
                 <li><a href="explore.html">Explore</a></li>
-                <li><a href="#councillors" class="active">Councillors</a></li>
+                <li><a href="councillors.html" class="active" aria-current="page">Councillors</a></li>
                 <li><a href="report.html">Report a Fault</a></li>
                 <li><a href="queues.html">Avoid Queues</a></li>
                 <li><a href="bylaws.html">By-laws</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-input" aria-label="Search the site">
+            <button onclick="searchSite()" aria-label="Search">Search</button>
+        </div>
     </header>
-    <main>
-        <section id="councillors">
-            <div class="page-hero">
-                <h2>Find Your Councillors</h2>
-                <p>Contact your ward representatives for assistance.</p>
+
+    <!-- Main Content -->
+    <main class="councillors-page">
+        <section class="councillors-content">
+            <h2>Meet Our Councillors</h2>
+            <p>Enter a ward number to find your councillor.</p>
+            <div class="ward-search">
+                <input type="text" id="ward-input" placeholder="Enter Ward Number (e.g., 1)" aria-label="Ward number">
+                <button onclick="searchCouncillor()">Search</button>
             </div>
-            <div class="councillors-content">
-                <p>Enter your ward number to find your councillor.</p>
-                <input type="text" id="ward-input" placeholder="Ward Number">
-                <button onclick="findCouncillor()">Search</button>
+            <div id="search-result" class="search-result"></div>
+            <div class="councillors-gallery" id="councillors-gallery">
+                <div class="councillor-card" data-ward="1">
+                    <img src="images/ward-1.png" alt="Councillor 1" loading="lazy">
+                    <h3>M Mangwanya</h3>
+                    <p>Ward 1 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="2">
+                    <img src="images/Ward2.jpg" alt="Councillor 2" loading="lazy">
+                    <h3>Councillor Name 2</h3>
+                    <p>Ward 2 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="3">
+                    <img src="images/ward3.png" alt="Councillor 3" loading="lazy">
+                    <h3>M Zvidzai</h3>
+                    <p>Ward 3 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="5">
+                    <img src="images/Ward5.png" alt="Councillor 5" loading="lazy">
+                    <h3>A Mamvura</h3>
+                    <p>Ward 4 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="6">
+                    <img src="images/Ward6.png" alt="Councillor 6" loading="lazy">
+                    <h3>L Choto</h3>
+                    <p>Ward 4 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="7">
+                    <img src="images/Ward7.png" alt="Councillor 7" loading="lazy">
+                    <h3>H Marufu</h3>
+                    <p>Ward 4 Representative</p>
+                </div> <div class="councillor-card" data-ward="8">
+                    <img src="images/Ward8.png" alt="Councillor 8" loading="lazy">
+                    <h3>J Manyanga</h3>
+                    <p>Ward 4 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="9">
+                    <img src="images/ward9.png" alt="Councillor 9" loading="lazy">
+                    <h3>Deputy Mayor</h3>
+                    <p>Ward 4 Representative</p>
+                </div>
+                <div class="councillor-card" data-ward="4">
+                    <img src="images/ward10.png" alt="Councillor 4" loading="lazy">
+                    <h3>Councillor Name 4</h3>
+                    <p>Ward 4 Representative</p>
+                </div>
+                <!-- Add more councillors as needed -->
             </div>
+            <p><a href="index.html" class="button">Back to Home</a></p>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>© 2025 City of Gweru. All rights reserved.</p>
             <p>Contact us: <a href="mailto:info@gweru.org.zw">info@gweru.org.zw</a> | +263 54 222 011</p>
+            <div class="newsletter-signup">
+                <h3>Stay Updated</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
             <div class="social-links">
                 <a href="https://twitter.com/CityOfGweru" target="_blank" class="social-icon">
-                    <img src="images/x-image.png" alt="Twitter">
+                    <img src="images/twitter-icon.png" alt="Twitter" loading="lazy">
                 </a>
                 <a href="https://facebook.com/CityOfGweru" target="_blank" class="social-icon">
-                    <img src="images/facebook.jpeg" alt="Facebook">
+                    <img src="images/facebook-icon.png" alt="Facebook" loading="lazy">
                 </a>
                 <a href="https://instagram.com/CityOfGweru" target="_blank" class="social-icon">
-                    <img src="images/instagram.jpeg" alt="Instagram">
+                    <img src="images/instagram-icon.png" alt="Instagram" loading="lazy">
                 </a>
                 <a href="https://wa.me/26354222011" target="_blank" class="social-icon">
-                    <img src="images/whatsapp.jpeg" alt="WhatsApp">
+                    <img src="images/whatsapp-icon.png" alt="WhatsApp" loading="lazy">
                 </a>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

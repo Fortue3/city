@@ -187,7 +187,7 @@ nav ul li a.active {
 }
 
 .news-card {
-    background-color: #f4f4f4;
+    background-color: #5667e4;
     padding: 1.5rem;
     width: 300px;
     border-radius: 5px;
@@ -371,4 +371,198 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Councillors page styling */
+.councillors-page {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.councillors-content h2, 
+.councillors-content p {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.councillors-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.councillors-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Ward search styling */
+.ward-search {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.ward-search input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.ward-search button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ward-search button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.search-result {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.councillors-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.councillor-card {
+    background: rgba(130, 135, 239, 0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: none; /* Hidden by default */
+    width: fit-content; /* Let the card width fit the content (image + padding) */
+    max-width: 100%; /* Prevent overflow on smaller screens */
+}
+
+.councillors-gallery .councillor-card.visible {
+    display: block !important; /* Show when matching ward is found */
+}
+
+.councillor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.councillor-card img {
+    width: 100%;
+    max-width: 300px; /* Match the optimized image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.councillor-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.councillor-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive design for phones */
+@media (max-width: 768px) {
+    /* Councillors page */
+    .councillors-page {
+        padding: 2rem 1rem;
+    }
+
+    .councillors-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .councillors-content p {
+        font-size: 0.9rem;
+    }
+
+    .ward-search {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ward-search input {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .ward-search button {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .councillors-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .councillor-card {
+        width: 90%; /* Take up most of the screen width on mobile */
+        max-width: 300px; /* Cap the width to match the image */
+    }
+
+    .councillors-gallery .councillor-card.visible {
+        display: block !important; /* Ensure visibility works on mobile */
+    }
+
+    .councillor-card img {
+        max-width: 250px; /* Slightly smaller on mobile */
+        height: auto;
+    }
+
+    .councillor-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .councillor-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional media query for very small screens (e.g., 320px) */
+@media (max-width: 480px) {
+    .councillors-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .councillors-page {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .councillor-card {
+        width: 95%;
+        max-width: 250px; /* Even smaller for very small screens */
+    }
+
+    .councillor-card img {
+        max-width: 200px; /* Even smaller image width */
+        height: auto;
+    }
 }

@@ -44,3 +44,47 @@ document.getElementById('payment-form').addEventListener('submit', function (eve
 function showAlert(message) {
     alert(message);
 }
+// Existing search function for the header search bar
+function searchSite() {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    alert('Searching for: ${query}'); // Replace with actual search logic
+}
+
+// New function for searching councillors by ward number
+function searchCouncillor() {
+    const wardInput = document.getElementById('ward-input').value.trim();
+    const councillors = document.querySelectorAll('.councillor-card');
+    const resultDiv = document.getElementById('search-result');
+    let found = false;
+
+    // Hide all councillor cards
+    councillors.forEach(card => {
+        card.classList.remove('visible');
+    });
+
+    // Clear previous result message
+    resultDiv.textContent = '';
+
+    // Check if input is empty
+    if (!wardInput) {
+        resultDiv.textContent = 'Please enter a ward number.';
+        return;
+    }
+
+    // Search for the councillor with the matching ward number
+    councillors.forEach(card => {
+        const wardNumber = card.getAttribute('data-ward');
+        if (wardNumber === wardInput) {
+            card.classList.add('visible');
+            found = true;
+        }
+    });
+
+    // Display result message
+    if (!found) {
+        resultDiv.textContent = `No councillor found for Ward ${wardInput}.`;
+        console.log('No match found for ward:', wardInput);
+    } else {
+        resultDiv.textContent = `Showing councillor for Ward ${wardInput}.`;
+    }
+}
