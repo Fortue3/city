@@ -88,3 +88,18 @@ function searchCouncillor() {
         resultDiv.textContent = `Showing councillor for Ward ${wardInput}.`;
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Existing search function (if defined elsewhere)
+    window.searchSite = function() {
+        const query = document.getElementById('search-input').value;
+        alert('Searching for: ' + query); // Placeholder; replace with actual search logic
+    };
+});

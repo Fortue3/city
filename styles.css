@@ -58,6 +58,79 @@ nav ul li a:hover {
 nav ul li a.active {
     border-bottom: 2px solid white;
 }
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styling */
+.logo-img {
+    width: 100px; /* Adjust this for your "perfect" size */
+    height: auto;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333; /* Adjust color as needed */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background: #fff; /* Or your preferred color */
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: block; /* Show when active */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
 
 /* Page Hero with Background Image */
 .page-hero {
