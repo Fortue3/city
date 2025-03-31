@@ -10,21 +10,25 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <h1>City of Gweru</h1>
+            <a href="index.html"><img src="images/favicon.jpeg" alt="City of Gweru Logo" class="logo-img"></a>
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#work">Work</a></li>
-                <li><a href="index.html#explore">Explore</a></li>
-                <li><a href="index.html#councillors">Councillors</a></li>
-                <li><a href="index.html#report">Report a Fault</a></li>
-                <li><a href="index.html#queues">Avoid Queues</a></li>
-                <li><a href="index.html#bylaws">By-laws</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="councillors.html">Councillors</a></li>
+                <li><a href="report.html">Report a Fault</a></li>
+                <li><a href="queues.html">Avoid Queues</a></li>
+                <li><a href="bylaws.html">By-laws</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-input" aria-label="Search the site">
+            <button onclick="searchSite()" aria-label="Search">Search</button>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -51,11 +55,17 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>© 2025 City of Gweru. All rights reserved.</p>
             <p>Contact us: <a href="mailto:info@gweru.org.zw">info@gweru.org.zw</a> | +263 54 222 011</p>
+            <div class="newsletter-signup">
+                <h3>Stay Updated</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
             <div class="social-links">
                 <a href="https://twitter.com/CityOfGweru" target="_blank" class="social-icon">
                     <img src="images/x-image.png" alt="Twitter">
